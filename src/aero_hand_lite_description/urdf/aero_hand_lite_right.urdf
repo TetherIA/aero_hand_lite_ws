@@ -5,7 +5,7 @@
 <robot
   name="aero_hand_lite_right">
   <link
-    name="base_link">
+    name="right_base_link">
     <inertial>
       <origin
         xyz="0.00109122507694746 0.00334946623951281 0.0489855934276007"
@@ -26,12 +26,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://aero_hand_lite_description/meshes/base_link.STL" />
+          filename="package://aero_hand_lite_description/meshes/right_base_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="0.611764705882353 0.658823529411765 0.670588235294118 1" />
       </material>
     </visual>
     <collision>
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://aero_hand_lite_description/meshes/base_link.STL" />
+          filename="package://aero_hand_lite_description/meshes/right_base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -71,7 +71,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="0 0 1 1" />
       </material>
     </visual>
     <collision>
@@ -89,16 +89,16 @@
     type="revolute">
     <origin
       xyz="0.028112 -0.0145 0.025363"
-      rpy="-1.3549 0.27644 -2.4646" />
+      rpy="-1.2217 -0.0 -1.57" />
     <parent
-      link="base_link" />
+      link="right_base_link" />
     <child
       link="right_t_link" />
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-0.92502"
-      upper="0.8203"
+      lower="0"
+      upper="1.7453"
       effort="0"
       velocity="0" />
   </joint>
@@ -129,7 +129,7 @@
       <material
         name="">
         <color
-          rgba="0.69804 0.69804 0.69804 1" />
+          rgba="1 0.4 0.4 1" />
       </material>
     </visual>
     <collision>
@@ -187,7 +187,7 @@
       <material
         name="">
         <color
-          rgba="0.69804 0.69804 0.69804 1" />
+          rgba="0 0.6 1 1" />
       </material>
     </visual>
     <collision>
@@ -245,7 +245,7 @@
       <material
         name="">
         <color
-          rgba="0.69804 0.69804 0.69804 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -303,7 +303,7 @@
       <material
         name="">
         <color
-          rgba="0.69804 0.69804 0.69804 1" />
+          rgba="1 0 1 1" />
       </material>
     </visual>
     <collision>
@@ -356,7 +356,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="1 0.4 0.4 1" />
       </material>
     </visual>
     <collision>
@@ -376,7 +376,7 @@
       xyz="0.030626 -0.0011782 0.10542"
       rpy="0 0.05236 -0.034907" />
     <parent
-      link="base_link" />
+      link="right_base_link" />
     <child
       link="right_index_proximal_link" />
     <axis
@@ -414,7 +414,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="0.5 0.5 0.5 1" />
       </material>
     </visual>
     <collision>
@@ -472,7 +472,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="0 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -530,7 +530,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="1 0.227 0.88 1" />
       </material>
     </visual>
     <collision>
@@ -583,7 +583,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="1 0.4 0.4 1" />
       </material>
     </visual>
     <collision>
@@ -603,7 +603,7 @@
       xyz="0.0075 0 0.106"
       rpy="0 0 0" />
     <parent
-      link="base_link" />
+      link="right_base_link" />
     <child
       link="right_middle_proximal_link" />
     <axis
@@ -615,7 +615,7 @@
       velocity="0" />
   </joint>
   <link
-    name="right_middle_link">
+    name="right_middle_middle_link">
     <inertial>
       <origin
         xyz="-2.85973601964011E-09 -0.000363264332488778 0.00876078146450842"
@@ -636,12 +636,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://aero_hand_lite_description/meshes/right_middle_link.STL" />
+          filename="package://aero_hand_lite_description/meshes/right_middle_middle_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="0.5 0.5 0.5 1" />
       </material>
     </visual>
     <collision>
@@ -650,7 +650,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://aero_hand_lite_description/meshes/right_middle_link.STL" />
+          filename="package://aero_hand_lite_description/meshes/right_middle_middle_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -663,7 +663,7 @@
     <parent
       link="right_middle_proximal_link" />
     <child
-      link="right_middle_link" />
+      link="right_middle_middle_link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -699,7 +699,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="0 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -719,7 +719,7 @@
       xyz="0 0 0.022"
       rpy="0 0 0" />
     <parent
-      link="right_middle_link" />
+      link="right_middle_middle_link" />
     <child
       link="right_middle_distal_link" />
     <axis
@@ -757,7 +757,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="1 0.22 0.88 1" />
       </material>
     </visual>
     <collision>
@@ -810,7 +810,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="1 0.4 0.4 1" />
       </material>
     </visual>
     <collision>
@@ -830,7 +830,7 @@
       xyz="-0.015626 -0.0011782 0.10542"
       rpy="0 -0.05236 0.034907" />
     <parent
-      link="base_link" />
+      link="right_base_link" />
     <child
       link="right_ring_proximal_link" />
     <axis
@@ -842,7 +842,7 @@
       velocity="0" />
   </joint>
   <link
-    name=" right_ring_middle_link">
+    name="right_ring_middle_link">
     <inertial>
       <origin
         xyz="-1.05768104170789E-08 -0.000363267692106015 0.00876078358138278"
@@ -863,12 +863,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://aero_hand_lite_description/meshes/ right_ring_middle_link.STL" />
+          filename="package://aero_hand_lite_description/meshes/right_ring_middle_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="0.5 0.5 0.5 1" />
       </material>
     </visual>
     <collision>
@@ -877,7 +877,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://aero_hand_lite_description/meshes/ right_ring_middle_link.STL" />
+          filename="package://aero_hand_lite_description/meshes/right_ring_middle_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -890,7 +890,7 @@
     <parent
       link="right_ring_proximal_link" />
     <child
-      link=" right_ring_middle_link" />
+      link="right_ring_middle_link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -926,7 +926,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="0 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -946,7 +946,7 @@
       xyz="0 0 0.022"
       rpy="0 0 0" />
     <parent
-      link=" right_ring_middle_link" />
+      link="right_ring_middle_link" />
     <child
       link="right_ring_distal_link" />
     <axis
@@ -984,7 +984,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="1 0.22 0.88 1" />
       </material>
     </visual>
     <collision>
@@ -1037,7 +1037,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="1 0.4 0.4 1" />
       </material>
     </visual>
     <collision>
@@ -1057,7 +1057,7 @@
       xyz="-0.038266 -0.0036416 0.092393"
       rpy="0 -0.10472 0.069946" />
     <parent
-      link="base_link" />
+      link="right_base_link" />
     <child
       link="right_pinky_proximal_link" />
     <axis
@@ -1095,7 +1095,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="0.5 0.5 0.5 1" />
       </material>
     </visual>
     <collision>
@@ -1153,7 +1153,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="0 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -1211,7 +1211,7 @@
       <material
         name="">
         <color
-          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+          rgba="1 0.22 0.88 1" />
       </material>
     </visual>
     <collision>
