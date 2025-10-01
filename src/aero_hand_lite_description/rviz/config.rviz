@@ -385,7 +385,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: right_frame_link
+    Fixed Frame: right_base_link
     Frame Rate: 30
   Name: root
   Tools:
