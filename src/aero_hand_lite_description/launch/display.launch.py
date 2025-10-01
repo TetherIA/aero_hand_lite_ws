@@ -4,16 +4,16 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.conditions import IfCondition, UnlessCondition
 from launch.substitutions import Command, LaunchConfiguration
+from launch_ros.parameter_descriptions import ParameterValue
 
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    pkg_path = get_package_share_path('aerie_lite')
-    assets_pkg_path = get_package_share_path('tetheria_assets')
+    pkg_path = get_package_share_path('aero_hand_lite_description')
 
     model_arg = DeclareLaunchArgument(
         name='model', 
-        default_value=str(assets_pkg_path / 'aerie_lite_v1_0/aerie_lite_v1_0.urdf'),
+        default_value=str(pkg_path / 'urdf' / 'aero_hand_lite_right.urdf'),
         description='Absolute path to robot urdf file'
     )
 
@@ -30,13 +30,15 @@ def generate_launch_description():
         description='Absolute path to rviz config file'
     )
 
+    robot_description = ParameterValue(
+        Command(['xacro ', LaunchConfiguration('model')]), value_type=str
+    )
+
     ## Nodes
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        parameters=[{
-            'robot_description': Command(["xacro ", LaunchConfiguration('model')])
-        }],
+        parameters=[{'robot_description': robot_description,}],
     )
 
     joint_state_publisher_node = Node(
